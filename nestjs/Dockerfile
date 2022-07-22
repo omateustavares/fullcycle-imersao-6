@@ -4,4 +4,4 @@ RUN npm install -g @nestjs/cli@8.0.0
 
 USER node
 
-WORKDIR /usr/app
+WORKDIR /home/node/app

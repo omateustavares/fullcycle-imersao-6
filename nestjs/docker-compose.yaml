@@ -3,9 +3,9 @@ version: '3'
 services:
   app:
     build: .
-    entrypoint: sh -c "npm install && npm run start:dev"
+    entrypoint: .docker/entrypoint.sh
     volumes:
-      - .:/usr/app
+      - .:/home/node/app
     ports:
       - 3000:3000
     depends_on:
@@ -36,3 +36,6 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=root
     depends_on:
       - db
+
+  redis:
+    image: redis:6.2.6-alpine3.14
