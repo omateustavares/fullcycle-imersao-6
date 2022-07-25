@@ -83,3 +83,6 @@ services:
         sleep infinity
     extra_hosts:
       - "host.docker.internal:172.17.0.1"
+# kafka-console-producer --bootstrap-server=localhost:9092 --topic=emails
+# { "emails": [ "mateustm17@gmail.com" ], "subject": "Novos tweets encontrados", "body": "Acesse o link <a href=\"http://localhost:3001/tweets\">Clique aqui</a>" }
+
